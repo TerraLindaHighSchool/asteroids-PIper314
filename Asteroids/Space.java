@@ -57,11 +57,11 @@ public class Space extends World
             int x = Greenfoot.getRandomNumber(getWidth());
             int y = Greenfoot.getRandomNumber(getHeight());
             
-            int deltaRed = Greenfoot.getRandomNumber(10) - 5;
-            int deltaGreen = Greenfoot.getRandomNumber(10) - 5;
-            int deltaBlue = Greenfoot.getRandomNumber(10) - 5;
+            int deltaRed = Greenfoot.getRandomNumber(50) - 15;
+            int deltaGreen = Greenfoot.getRandomNumber(50) - 15;
+            int deltaBlue = Greenfoot.getRandomNumber(50) - 15;
             
-            int starBrightness = Greenfoot.getRandomNumber(130) + 65;
+            int starBrightness = Greenfoot.getRandomNumber(130) + 70;
             
             Color StarColor = new Color(starBrightness + deltaRed, starBrightness + deltaGreen, starBrightness + deltaBlue);
             
