@@ -1,11 +1,8 @@
 /**
- * A 2D vector. The vector can be read and manipulated in Cartesian coordinates
- * (as an x,y-offset pair) or in polar coordinates (as a direction and a length).
+ * Write a description of class Vector here.
  * 
- * @author Poul Henriksen
- * @author Michael Kölling
- * 
- * @version 2.2
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public final class Vector
 {

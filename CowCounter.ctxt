@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=CowCounter
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ CowCounter\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=CowCounter()
+comment1.text=\r\n\ Create\ a\ counter\ without\ a\ text\ prefix,\ initialized\ to\ zero.\r\n
+comment2.params=prefix
+comment2.target=CowCounter(java.lang.String)
+comment2.text=\r\n\ Create\ a\ counter\ with\ a\ given\ text\ prefix,\ initialized\ to\ zero.\r\n
+comment3.params=
+comment3.target=void\ increment()
+comment3.text=\r\n\ Increment\ the\ counter\ value\ by\ one.\r\n
+comment4.params=
+comment4.target=void\ updateImage()
+comment4.text=\r\n\ Show\ the\ current\ text\ and\ count\ on\ this\ actor's\ image.\r\n
+numComments=5

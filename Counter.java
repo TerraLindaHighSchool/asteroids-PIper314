@@ -1,18 +1,14 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * A Counter class that allows you to display a numerical value on screen.
+ * Write a description of class Counter here.
  * 
- * The Counter is an actor, so you will need to create it, and then add it to
- * the world in Greenfoot.  If you keep a reference to the Counter then you
- * can adjust its value.
- * 
- * @author Neil Brown and Michael Kölling 
- * @version 1.1
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class Counter extends Actor
 {
-    private static final Color transparent = new Color(0,0,0,0);
+   private static final Color transparent = new Color(0,0,0,0);
     private GreenfootImage background;
     private int value;
     private int target;
@@ -29,8 +25,8 @@ public class Counter extends Actor
     public Counter(String prefix)
     {
         background = getImage();  // get image from class
-        value = 0;
-        target = 0;
+        value = 6;
+        target = 6;
         this.prefix = prefix;
         updateImage();
     }
@@ -40,11 +36,7 @@ public class Counter extends Actor
      */
     public void act() 
     {
-        if (value < target) {
-            value++;
-            updateImage();
-        }
-        else if (value > target) {
+       if (value > target) {
             value--;
             updateImage();
         }

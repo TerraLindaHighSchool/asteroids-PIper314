@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Farm
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Farm()
+comment1.text=\r\n\ Create\ a\ new\ world.\ It\ will\ be\ initialised\ with\ a\ few\ ant\ hills\r\n\ and\ cows\ sources\r\n
+comment2.params=
+comment2.target=void\ act()
+comment3.params=subtractFromScore
+comment3.target=void\ updateScore(int)
+comment4.params=
+comment4.target=void\ gameOver()
+comment4.text=private\ void\ addAliens(int\ count)\ \r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ count;\ i++)\ \r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ int\ x\ \=\ Greenfoot.getRandomNumber(getWidth()/2);\r\n\ \ \ \ \ \ \ \ \ \ \ \ int\ y\ \=\ Greenfoot.getRandomNumber(getHeight()/2);\r\n\ \ \ \ \ \ \ \ \ \ \ \ addObject(new\ Aliens(),\ x,\ y);\r\n\ \ \ \ \ \ \ \ }\r\n}
+comment5.params=
+comment5.target=void\ prepare()
+numComments=6

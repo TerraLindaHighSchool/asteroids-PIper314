@@ -1,11 +1,10 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The ScoreBoard is used to display results on the screen. It can display some
- * text and a score.
+ * Write a description of class ScoreBoard here.
  * 
- * @author M Kölling
- * @version 1.1
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class ScoreBoard extends Actor
 {
@@ -26,7 +25,7 @@ public class ScoreBoard extends Actor
      */
     public ScoreBoard(int score)
     {
-        makeImage("Game Over", "Score: ", score);
+        makeImage("Cows Abducted ", "You Lost", score);
     }
 
     /**
