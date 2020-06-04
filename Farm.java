@@ -22,7 +22,7 @@ public class Farm extends World
         super(900, 900, 1); 
         prepare();
         
-        //addAliens(startAliens);
+        
         scoreCounter = new Counter("Cows Left:");
         addObject(scoreCounter, 835, 20);
         
@@ -44,16 +44,7 @@ public class Farm extends World
         scoreCounter.add(subtractFromScore);
     }
     
-    /**private void addAliens(int count) 
-    {
-        for(int i = 0; i < count; i++) 
-        {
-            int x = Greenfoot.getRandomNumber(getWidth()/2);
-            int y = Greenfoot.getRandomNumber(getHeight()/2);
-            addObject(new Aliens(), x, y);
-        }
-    }*/
-    
+   
     public void gameOver() 
     {
         int currentScore = scoreCounter.getValue();
