@@ -28,7 +28,7 @@ public class Cows extends Actor
         {
           getWorld().removeObject(this);
         }
-        turnAtEdge(180);
+        
         if (Greenfoot.getRandomNumber(100) <= 10)
          {
              turnRandomly();
@@ -37,14 +37,7 @@ public class Cows extends Actor
          }
     } 
    
-    public void turnAtEdge(int degrees)
-    {
-        if (isAtEdge())
-        {
-            turn(degrees);
-        }
-    }
-    
+   
     public void turnRandomly()
     {
         int turnDegree = Greenfoot.getRandomNumber(30 * 2) - 30;

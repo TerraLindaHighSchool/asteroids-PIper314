@@ -21,9 +21,8 @@ public class Farm extends World
     {
         super(900, 900, 1); 
        
-        scoreCounter = new CowCounter("Cows Left:");
-        addObject(scoreCounter, 835, 20);
-        
+        scoreCounter = new CowCounter("Cows Abducted:");
+        addObject(scoreCounter, 835, 100);
         Explosion.initializeImages();
         setPaintOrder(Aliens.class, MotherShip.class);
         prepare();
@@ -76,9 +75,9 @@ public class Farm extends World
 
         Cows cows6 = new Cows();
         addObject(cows6,540,460);
-        Cannon cannon = new Cannon();
-        addObject(cannon,465,876);
+        SlingShot slingshot = new SlingShot();
+        addObject(slingshot,465,876);
         MotherShip motherShip = new MotherShip();
-        addObject(motherShip,498,10);
+        addObject(motherShip,458,65);
     }
 }

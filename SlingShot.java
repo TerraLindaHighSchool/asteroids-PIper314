@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Cannon extends SmoothMover
+public class SlingShot extends SmoothMover
 {
     private static final int gunReloadTime = 25;
 
@@ -20,7 +20,7 @@ public class Cannon extends SmoothMover
     /**
      * Initialise this rocket.
      */
-    public Cannon()
+    public SlingShot()
     {
         reloadDelayCount = 5;
         addToVelocity(new Vector(125, .5));

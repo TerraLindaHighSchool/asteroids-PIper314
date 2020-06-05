@@ -155,7 +155,7 @@ public class Aliens extends SmoothMover
     private void breakUp() 
     {
         Greenfoot.playSound("Explosion.wav");
-        setImage("deadrock.png");
+        
         if (size <= 16) {
             getWorld().removeObject(this);
         }
@@ -171,6 +171,7 @@ public class Aliens extends SmoothMover
             a1.move();
             a2.move();
         
+            setImage("deadrock.png");
             getWorld().removeObject(this);
         }
     }

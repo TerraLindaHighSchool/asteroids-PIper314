@@ -22,7 +22,6 @@ public class CowCounter extends Actor
      */
     public CowCounter()
     {
-        //this("");
         this(new String());
     }
     
@@ -85,23 +84,6 @@ public class CowCounter extends Actor
         updateImage();
     }
 
-    /**
-     * Update the image on screen to show the current value.
-     */
-    private void updateImage()
-    {
-        GreenfootImage image = new GreenfootImage(background);
-        GreenfootImage text = new GreenfootImage(prefix + value, 22, Color.BLACK, transparent);
-        
-        if (text.getWidth() > image.getWidth() - 20)
-        {
-            image.scale(text.getWidth() + 20, image.getHeight());
-        }
-        
-        image.drawImage(text, (image.getWidth()-text.getWidth())/2, 
-                        (image.getHeight()-text.getHeight())/2);
-        setImage(image);
-    }
     
     /**
      * Increment the counter value by one.
@@ -112,15 +94,12 @@ public class CowCounter extends Actor
         updateImage();
     }
 
-    /**
-     * Show the current text and count on this actor's image.
-     
     private void updateImage()
     {
         GreenfootImage image = getImage();
         image.clear();
         image.drawString(text + value, 1, 12);
-            }*/
+    }
 }
 
 
