@@ -10,7 +10,7 @@ public class Pumpkin extends SmoothMover
 {
     private static final int damage = 10;
    
-    private int life = 30;
+    private int life = 40;
     private static final int pointsToAdd = 1;
    
     public Pumpkin()

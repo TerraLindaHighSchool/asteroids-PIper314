@@ -12,10 +12,9 @@ public class Start extends World
     public Start()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-        //GreenfootImage start = new GreenfootImage("");
-        //start.scale(900,900);
-        //setBackground(start);
+        super(900, 900, 1); 
+        GreenfootImage start = new GreenfootImage("start.png");
+        
         prepare();
     }
 

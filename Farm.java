@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Farm extends World
 {
-    private Counter scoreCounter;
-    private int startAliens = 5;
+    private CowCounter scoreCounter;
+    
     
     public static final int SIZE = 640;
 
@@ -20,10 +20,8 @@ public class Farm extends World
     public Farm()
     {
         super(900, 900, 1); 
-        prepare();
-        
-        //addAliens(startAliens);
-        scoreCounter = new Counter("Cows Left:");
+       
+        scoreCounter = new CowCounter("Cows Left:");
         addObject(scoreCounter, 835, 20);
         
         Explosion.initializeImages();
@@ -31,17 +29,12 @@ public class Farm extends World
         prepare();
     }
     
-    public void act()
-    {
-        if(getObjects(Cows.class).size() == 0)
-        {
-            Greenfoot.stop();
-        }
-    }
     
-    public void updateScore(int subtractFromScore)
+    
+    
+   public void updateScore(int addToScore)
     {
-        scoreCounter.add(subtractFromScore);
+        scoreCounter.add(addToScore);
     }
     
     /**private void addAliens(int count) 
@@ -86,6 +79,6 @@ public class Farm extends World
         Cannon cannon = new Cannon();
         addObject(cannon,465,876);
         MotherShip motherShip = new MotherShip();
-        addObject(motherShip,461,90);
+        addObject(motherShip,498,10);
     }
 }

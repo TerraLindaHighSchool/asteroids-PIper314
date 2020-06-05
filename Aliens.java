@@ -23,7 +23,21 @@ public class Aliens extends SmoothMover
     private final int TIME_FOLLOWING_TRIAL = 30;
     private int followTrialTimeRemaining = 0;
     
+    public Aliens()
+    {
+        this(40);
+    }
     
+    public Aliens(int size)
+    {
+        super(new Vector(Greenfoot.getRandomNumber(360), 2));
+    }      
+    
+    public Aliens(int size, Vector velocity)
+    {
+        super(velocity);
+           }
+           
     /**
      * Create an ant with a given home hill. The initial speed is zero (not moving).
      */
@@ -40,6 +54,21 @@ public class Aliens extends SmoothMover
     public void act()
     {
         status();
+        turnAtEdge(180);
+    }
+      
+    public void turnAtEdge(int degrees)
+    {
+        if (isAtEdge())
+        {
+            turn(degrees);
+        }
+    }
+    
+    public void turnRandomly()
+    {
+        int turnDegree = Greenfoot.getRandomNumber(30 * 2) - 30;
+        turn(turnDegree);
     }
     
     private void checkForCows()
@@ -70,10 +99,16 @@ public class Aliens extends SmoothMover
     {
          if(followTrialTimeRemaining == 0)
         {
-          
-          randomWalk();
+          if (Greenfoot.getRandomNumber(360) <= 10)
+          {
+             turnRandomly();
+          } 
+          else 
+          {
+             move(3);
+          }
         }
-         else
+        else
         {
           followTrialTimeRemaining--;
           walkAwayFromHome();         
@@ -101,20 +136,7 @@ public class Aliens extends SmoothMover
     }
     
     
-    public Aliens()
-    {
-        this(40);
-    }
     
-    public Aliens(int size)
-    {
-        super(new Vector(Greenfoot.getRandomNumber(360), 2));
-    }      
-    
-    public Aliens(int size, Vector velocity)
-    {
-        super(velocity);
-           }
     
     public int getStability() 
     {
@@ -133,7 +155,7 @@ public class Aliens extends SmoothMover
     private void breakUp() 
     {
         Greenfoot.playSound("Explosion.wav");
-        
+        setImage("deadrock.png");
         if (size <= 16) {
             getWorld().removeObject(this);
         }

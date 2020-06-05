@@ -12,7 +12,7 @@ public class MotherShip extends Actor
     private int aliens = 0;
     
     /** Total number of aliens in this hill. */
-    private int maxAliens = 6;
+    private int maxAliens = 3;
     
     /** Counter to show how much cows have been collected so far. */
     private CowCounter cowsCowCounter;

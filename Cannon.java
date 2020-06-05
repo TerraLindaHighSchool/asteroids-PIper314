@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Cannon extends SmoothMover
 {
-    private static final int gunReloadTime = 20;
+    private static final int gunReloadTime = 25;
 
     private int reloadDelayCount;
     private Vector velocity;
