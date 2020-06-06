@@ -126,7 +126,7 @@ public class Aliens extends SmoothMover
             {
                 setImage(image1);
                 carryingCows = false;
-                getHomeHill().countCows();
+                
             }
         }
          else
@@ -157,6 +157,7 @@ public class Aliens extends SmoothMover
         Greenfoot.playSound("Explosion.wav");
         
         if (size <= 16) {
+             setImage("deadrock.png");
             getWorld().removeObject(this);
         }
         else {
@@ -171,8 +172,18 @@ public class Aliens extends SmoothMover
             a1.move();
             a2.move();
         
-            setImage("deadrock.png");
             getWorld().removeObject(this);
         }
     }
+    /*private void checkCollision()
+    {
+        if(getOneIntersectingObject(Pumpkin.class) != null)
+        {
+            Farm farm = (Farm) getWorld();
+            farm.addObject(new Explosion(), getX(), getY());
+            setImage("deadrock.png");
+            getWorld.removeObject(this);
+        }
+        
+    }*/
 }

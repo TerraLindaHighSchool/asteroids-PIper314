@@ -12,10 +12,10 @@ public class MotherShip extends Actor
     private int aliens = 0;
     
     /** Total number of aliens in this hill. */
-    private int maxAliens = 3;
+    private int maxAliens = 8;
     
     /** Counter to show how much cows have been collected so far. */
-    private CowCounter cowsCowCounter;
+    
     
     /**
      * Constructor for ant hill with default number of aliens (40).
@@ -48,20 +48,5 @@ public class MotherShip extends Actor
         }
     }
 
-    /**
-     * Record that we have collected another bit of cows.
-     */
-    public void countCows()
-    {
-        // if we have no cows counter yet (first time) -- create it
-        if(cowsCowCounter == null) 
-        {
-            cowsCowCounter = new CowCounter("Cows: ");
-            int x = getY();
-            int y = getX() + getImage().getWidth()/2 + 8;
-
-            getWorld().addObject(cowsCowCounter, x, y);
-        }        
-        cowsCowCounter.increment();
-    }
+    
 }

@@ -24,24 +24,13 @@ public class Cows extends Actor
      */
     public void act() 
     {
+        move(-1);
         if(isTouching(Aliens.class))
         {
           getWorld().removeObject(this);
         }
-        
-        if (Greenfoot.getRandomNumber(100) <= 10)
-         {
-             turnRandomly();
-         } else {
-             move(1);
-         }
     } 
    
    
-    public void turnRandomly()
-    {
-        int turnDegree = Greenfoot.getRandomNumber(30 * 2) - 30;
-        turn(turnDegree);
-    }
     
 }

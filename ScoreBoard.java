@@ -23,9 +23,9 @@ public class ScoreBoard extends Actor
     /**
      * Create a score board for the final result.
      */
-    public ScoreBoard(int score)
+    public ScoreBoard(int time)
     {
-        makeImage("Cows Abducted ", "You Lost", score);
+        makeImage("Aliens defeated ", "Cows Saved", time);
     }
 
     /**

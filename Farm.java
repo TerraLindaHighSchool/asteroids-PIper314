@@ -8,76 +8,111 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Farm extends World
 {
-    private CowCounter scoreCounter;
     
-    
+    GreenfootSound music;
+    private Counter scoreCounter;
     public static final int SIZE = 640;
-
+    private int frameCount;
     /**
      * Create a new world. It will be initialised with a few ant hills
      * and cows sources
      */
     public Farm()
     {
-        super(900, 900, 1); 
+        super(1000, 900, 1); 
+        
+        scoreCounter = new Counter("Aliens Destroyed: ");
+        addObject(scoreCounter, 99, 880);
        
-        scoreCounter = new CowCounter("Cows Abducted:");
-        addObject(scoreCounter, 835, 100);
         Explosion.initializeImages();
         setPaintOrder(Aliens.class, MotherShip.class);
+        music = new GreenfootSound("abducted.mp3");
         prepare();
     }
     
-    
-    
-    
-   public void updateScore(int addToScore)
+    public void updateScore(int addToScore)
     {
         scoreCounter.add(addToScore);
     }
     
-    /**private void addAliens(int count) 
-    {
-        for(int i = 0; i < count; i++) 
-        {
-            int x = Greenfoot.getRandomNumber(getWidth()/2);
-            int y = Greenfoot.getRandomNumber(getHeight()/2);
-            addObject(new Aliens(), x, y);
-        }
-    }*/
-    
-    public void gameOver() 
-    {
-        int currentScore = scoreCounter.getValue();
-
-        int x = getWidth() /2;
-        int y = getHeight() /2;
-
-        addObject(new ScoreBoard(currentScore),x ,y);    
-    }
-    
     private void prepare()
     {
-
-        CowCounter cowCounter = new CowCounter();
-        addObject(cowCounter,466,19);
-
-        Cows cows = new Cows();
-        addObject(cows,94,524);
-        Cows cows2 = new Cows();
-        addObject(cows2,790,512);
-        Cows cows3 = new Cows();
-        addObject(cows3,730,765);
-        Cows cows4 = new Cows();
-        addObject(cows4,357,612);
-        Cows cows5 = new Cows();
-        addObject(cows5,59,751);
-
-        Cows cows6 = new Cows();
-        addObject(cows6,540,460);
         SlingShot slingshot = new SlingShot();
         addObject(slingshot,465,876);
         MotherShip motherShip = new MotherShip();
         addObject(motherShip,458,65);
+        
+        music.playLoop();
+    }
+    
+    public void act()
+    {
+        spawnObjects();
+        frameCount++;
+
+        if(frameCount == 1000)
+        {
+            frameCount = 0;
+        }
+    }
+    
+    public int getFrameCount()
+    {
+        return frameCount;
+    }
+    
+    public void spawnObjects()
+    {
+        switch (frameCount)
+        {
+            case 150:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 400:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 600:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 800:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 100:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 200:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 450:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 650:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 850:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 250:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 350:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 750:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 890:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 980:
+                addObject(new Cows(), 964, 634);
+                break;
+            case 230:
+                addObject(new Cows(), 964, 634);
+                break;
+            default: 
+                break;
+            
+        }
     }
 }

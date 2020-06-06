@@ -7,8 +7,11 @@ comment1.text=\r\n\ Create\ a\ new\ world.\ It\ will\ be\ initialised\ with\ a\ 
 comment2.params=addToScore
 comment2.target=void\ updateScore(int)
 comment3.params=
-comment3.target=void\ gameOver()
-comment3.text=private\ void\ addAliens(int\ count)\ \r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ count;\ i++)\ \r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ int\ x\ \=\ Greenfoot.getRandomNumber(getWidth()/2);\r\n\ \ \ \ \ \ \ \ \ \ \ \ int\ y\ \=\ Greenfoot.getRandomNumber(getHeight()/2);\r\n\ \ \ \ \ \ \ \ \ \ \ \ addObject(new\ Aliens(),\ x,\ y);\r\n\ \ \ \ \ \ \ \ }\r\n}
+comment3.target=void\ prepare()
 comment4.params=
-comment4.target=void\ prepare()
-numComments=5
+comment4.target=void\ act()
+comment5.params=
+comment5.target=int\ getFrameCount()
+comment6.params=
+comment6.target=void\ spawnObjects()
+numComments=7

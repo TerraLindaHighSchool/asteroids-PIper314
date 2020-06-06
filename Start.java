@@ -12,8 +12,7 @@ public class Start extends World
     public Start()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(900, 900, 1); 
-        GreenfootImage start = new GreenfootImage("start.png");
+        super(1000, 900, 1); 
         
         prepare();
     }
@@ -23,7 +22,7 @@ public class Start extends World
         if(Greenfoot.isKeyDown("enter"))
         {
             Greenfoot.setWorld(new Rules());
-            //Greenfoot.playSound("");
+            
         }
     }
 
@@ -33,5 +32,6 @@ public class Start extends World
      */
     private void prepare()
     {
+        
     }
 }
